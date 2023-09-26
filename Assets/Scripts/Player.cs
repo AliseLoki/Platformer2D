@@ -54,13 +54,11 @@ public class Player : MonoBehaviour
         if (collision.collider.TryGetComponent(out Coin coin))
         {
             _score += 1;
-            Debug.Log("You have " + _score + " coins");
         }
 
         if (collision.collider.TryGetComponent(out Enemy enemy))
         {
             _animator.SetTrigger(Die);
-            Debug.Log("YOU ARE DEAD!!!");
         }
     }
 }

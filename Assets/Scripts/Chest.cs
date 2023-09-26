@@ -7,7 +7,6 @@ public class Chest : MonoBehaviour
         if (collision.collider.TryGetComponent(out Player player))
         {
             Destroy(gameObject);
-            Debug.Log("YOU WIN");
         }
     }
 }

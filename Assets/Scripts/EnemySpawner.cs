@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : Spawner
 {
     [SerializeField] private Enemy[] _enemy;
     [SerializeField] private Transform[] _enemySpawnPoint;
@@ -12,7 +12,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void CreateEnemy()
     {
-        Instantiate(_enemy[0], _enemySpawnPoint[0].position, Quaternion.identity);
-        Instantiate(_enemy[1], _enemySpawnPoint[1].position, Quaternion.identity);
+        for (int i = 0, j = 0; i < _enemy.Length && j < _enemySpawnPoint.Length; i++, j++)
+        {
+            Spawn(_enemy[i], _enemySpawnPoint[j].position, Quaternion.identity);
+        }
     }
 }

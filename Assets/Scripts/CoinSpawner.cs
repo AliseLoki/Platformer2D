@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CoinSpawner : MonoBehaviour
+public class CoinSpawner : Spawner
 {
     [SerializeField] private Coin _coin;
     [SerializeField] private Transform[] _points;
@@ -14,7 +14,7 @@ public class CoinSpawner : MonoBehaviour
     {
         foreach (var point in _points)
         {
-            Instantiate(_coin, point.transform.position, Quaternion.identity);
+            Spawn(_coin, point.transform.position, Quaternion.identity);
         }
     }
 }

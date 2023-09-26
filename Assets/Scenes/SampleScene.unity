@@ -1853,7 +1853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  _jumpForce: 50
+  _jumpForce: 100
   _gravityModifier: 0.5
   _rigidbody2D: {fileID: 2021413672}
   _spriteRenderer: {fileID: 2021413669}

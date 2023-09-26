@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChestSpawner : MonoBehaviour
+public class ChestSpawner : Spawner
 {
     [SerializeField] private Chest _chest;
     [SerializeField] private Player _player;
@@ -15,7 +15,7 @@ public class ChestSpawner : MonoBehaviour
     {
         if (_player.Score == _maxCoins)
         {
-            Instantiate(_chest, transform.position, Quaternion.identity);
+            Spawn(_chest, transform.position, Quaternion.identity);
             _maxCoins = float.MaxValue;
         }
     }
